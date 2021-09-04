@@ -12,8 +12,8 @@ services:
     ports:
       - 8000:80
     environment:
-       VIRTUAL_HOST: "pazeh-kimgiok-2184.ithuan.tw"
-       LETSENCRYPT_HOST: "pazeh-kimgiok-2184.ithuan.tw"
+       VIRTUAL_HOST: "pazeh.ithuan.tw"
+       LETSENCRYPT_HOST: "pazeh.ithuan.tw"
        LETSENCRYPT_EMAIL: "ithuan@ithuan.tw"
     restart: always
   gunicorn:
