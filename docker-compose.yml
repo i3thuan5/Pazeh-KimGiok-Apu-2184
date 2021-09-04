@@ -9,8 +9,6 @@ services:
     networks:
       - default
       - nginx-bridge
-    ports:
-      - 8000:80
     environment:
        VIRTUAL_HOST: "pazeh.ithuan.tw"
        LETSENCRYPT_HOST: "pazeh.ithuan.tw"
