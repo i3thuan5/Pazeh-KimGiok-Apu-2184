@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  nginx:
+    image: nginx:1-alpine
+    volumes:
+      - "./nginx:/etc/nginx/conf.d:ro"
+      - "staticv:/usr/share/nginx/html/static/"
+    networks:
+      - default
+      - nginx-bridge
+    ports:
+      - 8000:80
+    environment:
+       VIRTUAL_HOST: "pazeh.ithuan.tw"
+       LETSENCRYPT_HOST: "pazeh.ithuan.tw"
+       LETSENCRYPT_EMAIL: "ithuan@ithuan.tw"
+    restart: always
+  gunicorn:
+    build: ./pazehsite/
+    volumes:
+    - "staticv:/staticfiles/"
+    restart: always
+
+volumes:
+  staticv:
+
+networks:
+  nginx-bridge:
+    external: true
