@@ -18,6 +18,10 @@ services:
     build: ./pazehsite/
     volumes:
     - "staticv:/staticfiles/"
+    networks:
+      default:
+        aliase:
+          - pazeh-gunicorn
     restart: always
 
 volumes:
