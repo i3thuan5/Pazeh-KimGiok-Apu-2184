@@ -25,3 +25,6 @@ class Record(models.Model):
         default=0,
         help_text='原始頁碼'
     )
+
+    def __str__(self):
+        return '{}. {} (p.{})'.format(self.csvid, self.pazeh, self.pageid)
