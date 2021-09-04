@@ -20,7 +20,7 @@ services:
     - "staticv:/staticfiles/"
     networks:
       default:
-        aliase:
+        aliases:
           - pazeh-gunicorn
     restart: always
 
