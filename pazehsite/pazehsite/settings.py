@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-wpajl)6@y$t3o-z$)@3wd#cc6t#@w@8=ddpitr$ov6+^k-fvu_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', ]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'autai',
 ]
 
 MIDDLEWARE = [
