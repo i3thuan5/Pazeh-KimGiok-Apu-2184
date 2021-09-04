@@ -1,7 +1,5 @@
 import csv
 import os
-import re
-from os.path import abspath, join
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.db import transaction
@@ -29,16 +27,3 @@ class Command(BaseCommand):
                     )
                 else:
                     print('(Skip)')
-                    # with open(tongan) as tong:
-                    #         for tioh in tshue.finditer(tong.read()):
-                    #             kiatko.append(tioh.group(1))
-                    # for bangtsam in Bangtsam.objects.all():
-                    #     for mih in kiatko:
-                    #         try:
-                    #             bangtsam.huanik.get(guanbun=mih)
-                    #         except BangtsamHuanik.DoesNotExist:
-                    #             bangtsam.huanik.create(
-                    #                 guanbun=mih, huanik='*{}'.format(mih)
-                    #             )
-                    #             print('{} thinn {}'.format(bangtsam, mih))
-                    #     bangtsam.save()
